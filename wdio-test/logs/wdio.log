@@ -1,3 +1,0 @@
-2019-06-23T00:50:32.789Z INFO @wdio/cli:Launcher: Run onPrepare hook
-2019-06-23T00:50:32.915Z INFO @wdio/local-runner: Start worker 0-0 with arg: wdio.conf.js,--spec,asyncCalls.js
-2019-06-23T00:50:42.231Z INFO @wdio/cli:Launcher: Run onComplete hook
