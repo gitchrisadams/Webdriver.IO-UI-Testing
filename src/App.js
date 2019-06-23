@@ -28,16 +28,13 @@ export default class App extends Component {
     }, 5000)
   }
 
-  onChangeEnterprise(value, portfolio) {
-    this.setState({
-      value,
-      portfolio
-    });
+  onChangeFruit(e) {
+    console.log('e', e);
   }
 
 
   render() {
-    const enterpriseOptions = [
+    const fruitOptions = [
       {
         value: '1',
         label: 'Banana',
@@ -82,8 +79,8 @@ export default class App extends Component {
 
 
       <Select
-        options={enterpriseOptions}
-        onChange={this.onChangeEnterprise}
+        options={fruitOptions}
+        onChange={this.onChangeFruit}
         isSearchable={true}
         id="fruit-select"
       />
