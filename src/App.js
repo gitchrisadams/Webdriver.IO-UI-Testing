@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Button } from '@material-ui/core';
+import Select from 'react-select';
 
 export default class App extends Component {
   state = {
@@ -26,7 +28,28 @@ export default class App extends Component {
     }, 5000)
   }
 
+  onChangeEnterprise(value, portfolio) {
+    this.setState({
+      value,
+      portfolio
+    });
+  }
+
+
   render() {
+    const enterpriseOptions = [
+      {
+        value: '1',
+        label: 'Banana',
+        portfolio: 'Country'
+      },
+      {
+        value: '2',
+        label: 'Orange',
+        portfolio: 'Comp_Ncomp'
+      }
+    ];
+
     return (
       <div className="App">
       <h1 className="test-app-heading">Test App</h1>
@@ -55,6 +78,15 @@ export default class App extends Component {
         <option value="pepper">pepper</option>
         <option value="Carrot">Carrot</option>
       </select>
+
+
+
+      <Select
+        options={enterpriseOptions}
+        onChange={this.onChangeEnterprise}
+        isSearchable={true}
+        id="fruit-select"
+      />
 
 
       {
