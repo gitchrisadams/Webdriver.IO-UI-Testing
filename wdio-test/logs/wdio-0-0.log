@@ -1,0 +1,10 @@
+2019-06-23T00:50:33.226Z INFO @wdio/local-runner: Run worker command: run
+2019-06-23T00:50:33.329Z INFO webdriver: [POST] http://127.0.0.1:4444/session
+2019-06-23T00:50:33.329Z INFO webdriver: DATA { capabilities:
+   { alwaysMatch: { browserName: 'chrome' }, firstMatch: [ {} ] },
+  desiredCapabilities: { browserName: 'chrome' } }
+2019-06-23T00:50:40.563Z INFO webdriver: COMMAND navigateTo("http://localhost:3000/")
+2019-06-23T00:50:40.564Z INFO webdriver: [POST] http://127.0.0.1:4444/session/d1f0f8f759fc064ee974a220c5438ac1/url
+2019-06-23T00:50:40.564Z INFO webdriver: DATA { url: 'http://localhost:3000/' }
+2019-06-23T00:50:42.055Z INFO webdriver: COMMAND deleteSession()
+2019-06-23T00:50:42.055Z INFO webdriver: [DELETE] http://127.0.0.1:4444/session/d1f0f8f759fc064ee974a220c5438ac1

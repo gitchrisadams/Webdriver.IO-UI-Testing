@@ -1,0 +1,23 @@
+2019-06-22T14:54:24.558Z INFO @wdio/local-runner: Run worker command: run
+2019-06-22T14:54:24.628Z INFO webdriver: [POST] http://127.0.0.1:4444/session
+2019-06-22T14:54:24.628Z INFO webdriver: DATA { capabilities:
+   { alwaysMatch: { browserName: 'chrome' }, firstMatch: [ {} ] },
+  desiredCapabilities: { browserName: 'chrome' } }
+2019-06-22T14:54:28.722Z INFO webdriver: COMMAND navigateTo("http://localhost:3000/")
+2019-06-22T14:54:28.723Z INFO webdriver: [POST] http://127.0.0.1:4444/session/6573811f6574d14a2a103cdabd3ec85c/url
+2019-06-22T14:54:28.723Z INFO webdriver: DATA { url: 'http://localhost:3000/' }
+2019-06-22T14:54:30.076Z INFO webdriver: COMMAND getTitle()
+2019-06-22T14:54:30.076Z INFO webdriver: [GET] http://127.0.0.1:4444/session/6573811f6574d14a2a103cdabd3ec85c/title
+2019-06-22T14:54:30.085Z INFO webdriver: RESULT React App
+2019-06-22T14:54:30.087Z INFO webdriver: COMMAND navigateTo("http://localhost:3000/")
+2019-06-22T14:54:30.087Z INFO webdriver: [POST] http://127.0.0.1:4444/session/6573811f6574d14a2a103cdabd3ec85c/url
+2019-06-22T14:54:30.087Z INFO webdriver: DATA { url: 'http://localhost:3000/' }
+2019-06-22T14:54:30.220Z INFO webdriver: COMMAND findElement("css selector", ".test-app-heading")
+2019-06-22T14:54:30.221Z INFO webdriver: [POST] http://127.0.0.1:4444/session/6573811f6574d14a2a103cdabd3ec85c/element
+2019-06-22T14:54:30.221Z INFO webdriver: DATA { using: 'css selector', value: '.test-app-heading' }
+2019-06-22T14:54:30.241Z INFO webdriver: RESULT { 'element-6066-11e4-a52e-4f735466cecf': '78487c6d-39ce-4bb5-ab2b-95b059b1a272' }
+2019-06-22T14:54:30.268Z INFO webdriver: COMMAND getElementText("78487c6d-39ce-4bb5-ab2b-95b059b1a272")
+2019-06-22T14:54:30.268Z INFO webdriver: [GET] http://127.0.0.1:4444/session/6573811f6574d14a2a103cdabd3ec85c/element/78487c6d-39ce-4bb5-ab2b-95b059b1a272/text
+2019-06-22T14:54:30.284Z INFO webdriver: RESULT Test App
+2019-06-22T14:54:30.285Z INFO webdriver: COMMAND deleteSession()
+2019-06-22T14:54:30.285Z INFO webdriver: [DELETE] http://127.0.0.1:4444/session/6573811f6574d14a2a103cdabd3ec85c

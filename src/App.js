@@ -1,26 +1,71 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+export default class App extends Component {
+  state = {
+    value: '',
+    passwordValue: '',
+    loading: false
+  };
+
+  handleChange = (event)  => {
+    this.setState({value: event.target.value})
+  }
+
+  handleSubmit = (event) => {
+    alert(`Login: ${this.state.value} Password: ${this.state.passwordValue}`);
+    event.preventDefault();
+  }
+
+  handleChangePassword = (event)  => {
+    this.setState({passwordValue: event.target.value})
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({loading: true})
+    }, 5000)
+  }
+
+  render() {
+    return (
+      <div className="App">
+      <h1 className="test-app-heading">Test App</h1>
+      <ul id="fruit-list">
+        <li>Bananas</li>
+        <li>Apples</li>
+        <li>Oranges</li>
+        <li><a href="http://pears.com">Pears</a></li>
+      </ul>
+      <form onSubmit={this.handleSubmit}>
+      <label htmlFor="input1">Login</label>
+      <input id="input1" value={this.state.value} onChange={this.handleChange}></input>
+
+      <label htmlFor="input2">Password</label>
+      <input id="input2" type="password" value={this.state.passwordValue} onChange={this.handleChangePassword}></input>
+      <input id="input-btn" type="submit" value="submit"/>
+      </form>
+      <input type="checkbox" name="fruits" value="Banana"></input>Banana
+      <input type="checkbox" name="fruits" value="Apple"></input>Apple
+      <input type="checkbox" name="fruits" value="Orange"></input>Orange
+      <input type="checkbox" name="fruits" value="Pear"></input>Pear
+      <br/>
+      <select id="dropdowns">
+        <option value="lettuce">lettuce</option>
+        <option value="avocodo">avocodo</option>
+        <option value="pepper">pepper</option>
+        <option value="Carrot">Carrot</option>
+      </select>
+
+
+      {
+        this.state.loading ?
+        <div id="done-loading">Done Loading</div> :
+        <img id="loading" alt="loading" src="/images/loadingIcon.gif"></img>
+      }
+
+
+
     </div>
-  );
+    )
+  }
 }
-
-export default App;
